@@ -30,9 +30,6 @@ while respuesta == "N":
                 print("Lista generada!")  
 
         case "C":   
-            if not lista_letras:  
-                print("No se ha generado ninguna lista. Por favor, genere una lista primero usando la opción B.")  
-            else:  
                 mostrar_lista(lista_letras)  
         
         case "D":  
