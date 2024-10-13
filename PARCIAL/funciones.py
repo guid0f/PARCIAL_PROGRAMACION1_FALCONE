@@ -18,13 +18,7 @@ def solicitar_numero():
             continue  
    
         es_entero = True  
-        
-        for i in numero_input:  
-            ascii_val = ord(i)  
-            if not (48 <= ascii_val <= 57):   
-                es_entero = False  
-                break  
-
+      
         if es_entero:  
             numero = int(numero_input)  
             if 3 <= numero <= 15:  
@@ -32,7 +26,15 @@ def solicitar_numero():
             else:  
                 print("El número debe estar entre 3 y 15. Intente de nuevo.")  
         else:  
-            print("Entrada no válida. Por favor, ingrese un número entero.")  
+            print("Entrada no válida. Por favor, ingrese un número entero.")          
+      
+        for i in numero_input:  
+            ascii_val = ord(i)  
+            if not (48 <= ascii_val <= 57):   
+                es_entero = False  
+                break  
+
+
 #B
 def generar_lista_letras(longitud:int) -> list:  
     """  
@@ -86,6 +88,7 @@ def buscar_letra_en_lista(letra: str, lista: list) -> list:
         list: Una lista de índices donde la letra se encuentra en la lista.  
     """  
     indices = []  
+    
     for i in range(len(lista)):  
         if lista[i] == letra:  
             indices = indices + [i] 
@@ -107,11 +110,13 @@ def ordenar_lista(lista: list) -> list:
     
     # Solicitar criterio al usuario  
     criterio = input("Ingrese 'ASC' para ordenar de forma ascendente o 'DESC' para descendente: ")
+    
     while criterio not in ["ASC", "DESC"]:  
         print("Criterio no válido. Debe ingresar 'ASC' o 'DESC'.")  
         criterio = input("Ingrese 'ASC' para ordenar de forma ascendente o 'DESC' para descendente: ")
 
     n = len(lista_ordenada)  
+    
     # Implementación del Bubble Sort  
     for i in range(n):  
         for j in range(0, n-i-1):  
