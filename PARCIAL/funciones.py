@@ -18,7 +18,13 @@ def solicitar_numero():
             continue  
    
         es_entero = True  
-      
+     
+        for i in numero_input:  
+            ascii_val = ord(i)  
+            if not (48 <= ascii_val <= 57):   
+                es_entero = False  
+                break        
+     
         if es_entero:  
             numero = int(numero_input)  
             if 3 <= numero <= 15:  
@@ -28,11 +34,7 @@ def solicitar_numero():
         else:  
             print("Entrada no válida. Por favor, ingrese un número entero.")          
       
-        for i in numero_input:  
-            ascii_val = ord(i)  
-            if not (48 <= ascii_val <= 57):   
-                es_entero = False  
-                break  
+
 
 
 #B
