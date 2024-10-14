@@ -109,9 +109,8 @@ def ordenar_lista(lista: list) -> list:
         list: Nueva lista ordenada según el criterio ingresado por el usuario.  
     """  
       
-    lista_ordenada = [letra for letra in lista]  # Copiamos cada letra a una nueva lista  
-    
-    # Solicitar criterio al usuario  
+    lista_ordenada = [letra for letra in lista]  
+     
     criterio = input("Ingrese 'ASC' para ordenar de forma ascendente o 'DESC' para descendente: ")
     
     while criterio not in ["ASC", "DESC"]:  
@@ -120,14 +119,13 @@ def ordenar_lista(lista: list) -> list:
 
     n = len(lista_ordenada)  
     
-    # Implementación del Bubble Sort  
-    for i in range(n):  
+    for i in range(n):   
         for j in range(0, n-i-1):  
             if criterio == "ASC":  
-                if lista_ordenada[j] > lista_ordenada[j + 1]:  # Ordenar de forma ascendente  
+                if lista_ordenada[j] > lista_ordenada[j + 1]:   
                     lista_ordenada[j], lista_ordenada[j + 1] = lista_ordenada[j + 1], lista_ordenada[j]  
-            elif criterio == "DESC":  
-                if lista_ordenada[j] < lista_ordenada[j + 1]:  # Ordenar de forma descendente  
+            elif criterio == "DESC":                                                                     # Bubble Sort  
+                if lista_ordenada[j] < lista_ordenada[j + 1]:   
                     lista_ordenada[j], lista_ordenada[j + 1] = lista_ordenada[j + 1], lista_ordenada[j]  
 
     return lista_ordenada

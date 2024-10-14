@@ -10,7 +10,7 @@ menu = '''
     E) ORDENAR LISTA  
     I) SALIR  
 
-Ingrese una opcion: 
+Ingrese una opcion:  
 '''  
 
 lista_letras = []  
