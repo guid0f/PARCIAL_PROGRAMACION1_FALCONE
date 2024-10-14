@@ -1,4 +1,5 @@
 import random  
+
 #A
 def solicitar_numero():  
     """  
@@ -32,7 +33,7 @@ def solicitar_numero():
             else:  
                 print("El número debe estar entre 3 y 15. Intente de nuevo.")  
         else:  
-            print("Entrada no válida. Por favor, ingrese un número entero.")          
+            print("Entrada no válida. Por favor, ingrese un número entero.")                 
       
 
 
@@ -70,7 +71,7 @@ def mostrar_lista(lista:list):
     if len(lista) > 0:  
         print("Lista generada:", end=" ")  
         for letra in lista[:-1]:  
-            print(letra, end=", ")  
+            print(letra, end=" ")  
         print(lista[-1])  
     else:  
         print("No se ha generado ninguna lista.")  
@@ -99,7 +100,7 @@ def buscar_letra_en_lista(letra: str, lista: list) -> list:
 #E
 def ordenar_lista(lista: list) -> list:  
     """  
-    Ordena una lista de letras en orden ascendente o descendente utilizando ordenamiento por burbuja.  
+    Ordena una lista de letras en orden ascendente o descendente utilizando bubble sort.  
    
     Parámetros:  
         lista (list): Lista de letras a ordenar.  
@@ -107,7 +108,7 @@ def ordenar_lista(lista: list) -> list:
     Devuelve:  
         list: Nueva lista ordenada según el criterio ingresado por el usuario.  
     """  
-    # Hacer una copia de la lista original  
+      
     lista_ordenada = [letra for letra in lista]  # Copiamos cada letra a una nueva lista  
     
     # Solicitar criterio al usuario  

@@ -9,6 +9,8 @@ menu = '''
     D) BUSCAR LETRA  
     E) ORDENAR LISTA  
     I) SALIR  
+
+Ingrese una opcion: 
 '''  
 
 lista_letras = []  
